@@ -1,0 +1,360 @@
+/* TEXT-TITLE */
+.title {
+	font-family: 'Poiret One'; 
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px #756464;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+/* TEXT-TITLE-END */
+
+.logotype {
+	width: 10%;
+	float: left;
+	font-family: 'Poiret One'; 
+	color: white;
+	text-shadow: 2px 2px #ad6a6a;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+/* MENU-SETTINGS */
+.container2{
+	width: 60%;
+	margin: 0 auto;
+}
+/* MENU-SETTINGS END */
+
+#backgroundVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	opacity: 1;
+}
+
+/* MENU */
+header {
+	background-color: rgba(92, 92, 92, 0.445);
+	/*background: linear-gradient(0deg, rgb(97, 113, 143) 0%, rgb(70, 131, 145) 100%);*/
+	filter: drop-shadow(0px 0px 4px #0000006b);
+}
+header::after {
+content: '';
+display: table;
+clear: both;
+}
+/* MENU-SETTINGS */
+
+nav{
+	float: right;
+}
+
+nav ul{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 15px;
+
+	position: relative;
+}
+
+nav a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover{
+	color: rgba(255, 255, 255, 0.767);
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.767);
+
+	position: absolute;
+	top: 0;
+	width: 0;
+	
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+/*MENY-SETTINGS-END*/
+
+body {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	background: linear-gradient(0deg, rgb(130, 142, 165) 0%, rgb(96, 148, 160) 100%);
+	/*background: linear-gradient(45deg, rgb(51, 99, 212) 25%, rgb(0, 198, 252) 150%);*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Poiret One";
+}
+
+.menu-item {
+	font-weight: 600;
+	letter-spacing: 3px;
+	font-family: "Poiret One";
+	letter-spacing: .29em;
+}
+
+.container{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	display: flex;
+	margin: 0;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+
+.img-text {
+	position: relative; 
+	width: 100%; 
+	height: 100%;
+}
+
+.zoom-effect{
+	width: 100%;
+	height: 100%;
+	margin: 1%;
+	transition: width 100ms;
+	filter: drop-shadow(0px 0px 4px #0000006b);
+	opacity: 1;
+
+	animation: 0.5s ease-in 1 startFade;
+}
+
+.text {
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 2px 2px #756464;
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	bottom: 0em;
+	right: 1.5em;
+	filter: drop-shadow(0px 0px 6px #000000);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.textQuestion {
+	font-family: 'Open Sans';
+	filter: drop-shadow(0px 0px 4px #0000006b);
+	font-size: 23px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(92, 92, 92, 0.466);
+	border-radius: 16px;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.scoreboard {
+	font-family: 'Open Sans';
+	filter: drop-shadow(0px 0px 4px #0000006b);
+	font-size: 23px;
+	font-weight: 300;
+	color: rgb(255, 255, 255);
+	text-align: left;
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-left: 10px;
+}
+tr{
+	background-color: rgba(82, 82, 82, 0.5);
+	padding-bottom: 8px;
+	padding-top: 8px;
+	padding-left: 8px;
+	opacity: 0;
+}
+tr:nth-child(even){
+	background-color: rgba(65, 64, 64, 0.5);
+}
+th {
+	background-color: rgba(58, 51, 51, 0.5);
+	font-weight: 300;
+}
+td, th{
+	padding-bottom: 8px;
+	padding-top: 8px;
+	padding-left: 8px;
+}
+
+#username{
+	font-family: 'Open Sans';
+	font-size: 23px;
+	color: rgb(255, 255, 255);
+	background-color: rgba(92, 92, 92, 0.466);
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#username::placeholder{
+	color: rgb(247, 247, 247);
+}
+
+.border {
+	font-family: 'Quicksand';
+	color: white;
+	font-size: 19px;
+	border-radius: 45px;
+	padding: 0.5em;
+	border: 1px solid white;
+	margin: 0;
+	background-color: rgba(92, 92, 92, 0.466);
+	margin-right: 1em;
+	filter: drop-shadow(0px 0px 4px #0000006b);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+#footer{
+	display: flex;
+}
+
+#buttons {
+	display: flex;
+    align-items: center;
+  	justify-content: center;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	cursor: pointer;
+}
+
+#image {
+	width: 100%;
+	filter: drop-shadow(0px 0px 4px #0000006b);
+	animation: .5s ease-in 1 startFade;
+}
+
+#questionContainer{
+	margin: auto; 
+	margin-top: 20px;
+	width: 40%;
+}
+
+@media only screen and (max-device-width: 1100px){
+	.title{
+		font-size: 24px;
+		text-align: left;
+	}
+	#scoreTitle {
+		margin-left: 2%;
+		font-size: 30px;
+	}
+	#questionContainer{
+		width: 95%;
+	}
+	.container2{
+		width: 100%;
+	}
+	nav li{
+		margin-left: 3px;
+		margin-right: 40px;
+		margin-left: -20px;
+	}
+	.logotype {
+		margin-left: 10%;
+	}
+	.zoom-effect{
+		margin-bottom: 20px;
+	}
+	.scoreboard{
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 96%;
+	}
+}
+@media only screen and (max-device-width: 800px){
+	.container{
+		display: block;
+	}
+}
+@media only screen and (min-device-width: 1100px){
+	.zoom-effect:hover {
+		width: 103%;
+	}
+}
+@media only screen and (max-width: 1100px){
+	.title{
+		font-size: 24px;
+		text-align: left;
+	}
+	#scoreTitle {
+		margin-left: 2%;
+		font-size: 30px;
+	}
+	#questionContainer{
+		width: 95%;
+	}
+	.container2{
+		width: 100%;
+	}
+	nav li{
+		margin-left: 3px;
+		margin-right: 40px;
+		margin-left: -20px;
+	}
+	.logotype {
+		margin-left: 10%;
+	}
+	.zoom-effect{
+		margin-bottom: 20px;
+	}
+	.scoreboard{
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 96%;
+	}
+}
+@media only screen and (max-width: 800px){
+	.container{
+		display: block;
+	}
+}
+@media only screen and (min-width: 1100px){
+	.zoom-effect:hover {
+		width: 103%;
+	}
+}
+@keyframes startFade {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}

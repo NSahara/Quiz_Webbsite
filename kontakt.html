@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+  <head>
+    <link rel="icon" href="images/quizzer.png">
+    <meta charset="UTF-8">
+    <title>Quizzer - Kontakta oss</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Style inputs */
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=button] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      input[type=skicka]:hover {
+        background-color: #45a049;
+      }
+      
+      /* Style the container/contact section */
+      .container {
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        padding: 5px;
+        filter: drop-shadow(0px 0px 10px #0000006b);
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+      
+      /* Create two columns that float next to eachother */
+      .column {
+        float: left;
+        width: 100%;
+        margin-top: 6px;
+        padding: 20px;
+        margin: auto;
+      }
+      
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column, input[type=button] {
+          width: 100%;
+          margin-top: 0;
+        }
+        .container {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
+      @media screen and (max-width: 1100px){
+        .container {
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+      }
+      </style>
+  </head>
+  <body id="background">
+    <video autoplay muted loop id="backgroundVideo" style="opacity: .5;"><source src="images/river.mp4" type="video/mp4"></video>
+    <header>
+      <div class="container2">
+        <a href="Index.html"><h1 class="logotype">Quizzer</h1></a>
+          <nav>
+              <ul>
+                  <li><a class="menu-item" href="kontakt.html">Kontakt</a></li>
+                  <li><a class="menu-item" href="Poanglista.html">Poänglista</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+    <p class="title">Kontakta oss <br>Ge rekommendationer/feedback till vår quiz, eller varför inte ge idéer om nya quiz? Bidra här:</p>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname">Förnamn</label>
+            <input type="text" id="fname" name="Förnamn" placeholder="Ditt namn..">
+            <label for="lname">Efternamn</label>
+            <input type="text" id="lname" name="efternamn" placeholder="Ditt efternamn..">
+            <label for="ämne">Ämne</label>
+            <textarea id="ämne" name="ämne" placeholder="Skriv.." style="height:170px"></textarea>
+            <input type="button" value="Skicka">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

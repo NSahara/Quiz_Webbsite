@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/quizzer.png">
+        <title>Filmer - Quizzer</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    </head>
+    <body id="background">
+    <video autoplay muted loop id="backgroundVideo" style="opacity: .4;"><source src="images/city.mp4" type="video/mp4"></video>
+        <header>
+            <div class="container2">
+              <a href="Index.html"><h1 class="logotype">Quizzer</h1></a>
+                <nav>
+                    <ul>
+                        <li><a class="menu-item" href="Kontakt.html">Kontakt</a></li>
+                        <li><a class="menu-item" href="Poanglista.html">Poänglista</a></li>
+                    </ul>
+                </nav>
+            </div>
+          </header>
+        <div id="questionContainer">
+            <img id="image" src="images/planet.jpg" alt="A">
+            <div style="padding: 1%; border-radius: 6px;">
+                <p style="text-align: center; margin-top: 0%; cursor: default;" class="textQuestion" id="title">Fråga</p>
+                <a onclick="Answer(1)"><p class="textQuestion" id="alt1">1: </p></a>
+                <a onclick="Answer(2)"><p class="textQuestion" id="alt2">2: </p></a>
+                <a onclick="Answer(3)"><p class="textQuestion" id="alt3">3: </p></a>
+                <input id="username" type="text" placeholder="Skriv in ditt namn..." pattern="[^,/*]" autocomplete="off" maxlength="25">
+            </div>
+            <div id="buttons">
+                <a onclick="PreviousQuestion()"><p class="border" id="previous">← Föregående fråga</p></a>
+                <a onclick="NextQuestion()"><p class="border" id="next">Nästa fråga →</p></a>
+            </div>
+        </div>
+        <script data-id=1 src="quiz.js"></script>
+    </body>
+</html>

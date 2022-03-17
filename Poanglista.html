@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+    <head>
+        <link rel="icon" href="images/quizzer.png">
+        <meta charset="UTF-8">
+        <title>Poänglista - Quizzer</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>   
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <video autoplay muted loop id="backgroundVideo" style="opacity: .5;"><source src="images/river.mp4" type="video/mp4"></video>
+        <header>
+            <div class="container2">
+                <a href="Index.html"><h1 class="logotype">Quizzer</h1></a>
+                <nav>
+                    <ul>
+                        <li> <a class="menu-item" href="Kontakt.html">Kontakt</a> </li>
+                        <li> <a class="menu-item" href="Poanglista.html">Poänglista</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <p id="scoreTitle" class="title">Poänglista</p>
+        <table id="table" class="scoreboard">
+            <tr>
+                <th style="margin-bottom: 20px;">Namn</th>
+                <th>Quiz</th>
+                <th>Poäng</th>
+                <th>Datum</th>
+            </tr>
+        </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //localStorage.setItem("Name", "");
+        const table = document.getElementById("table");
+        var name = localStorage.getItem("Name");
+        var nameResults = name.split("*");
+        
+        var test = document.getElementById("test");
+        var text = "";
+        for(var i = 0; i < nameResults.length - 1; i++){
+            var tableRow = document.createElement("tr");
+            var currentResult = nameResults[i].split(",");
+            
+            var namn = document.createElement("td");
+            var quiz = document.createElement("td");
+            var score = document.createElement("td");
+            var date = document.createElement("td");
+
+            namn.innerHTML = currentResult[0];
+            quiz.innerHTML = currentResult[1];
+            score.innerHTML = currentResult[2];
+            date.innerHTML = currentResult[3];
+
+            tableRow.appendChild(namn);
+            tableRow.appendChild(quiz);
+            tableRow.appendChild(score);
+            tableRow.appendChild(date);
+            
+            table.appendChild(tableRow);
+
+            $("tr").delay(i * 100).animate({"opacity": "1"}, 700);
+        }
+        
+    </script>
+    </body>
+</html>

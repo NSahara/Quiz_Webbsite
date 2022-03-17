@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+    <head>
+        <link rel="icon" href="images/quizzer.png">
+        <meta charset="UTF-8">
+        <title>Välkommen till Quizzer</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <video autoplay muted loop id="backgroundVideo" style="opacity: .5;"><source src="images/river.mp4" type="video/mp4"></video>
+    <header>
+      <div class="container2">
+        <a href="Index.html"><h1 class="logotype">Quizzer</h1></a>
+          <nav>
+              <ul>
+                  <li><a class="menu-item" href="Kontakt.html">Kontakt</a></li>
+                  <li><a class="menu-item" href="Poanglista.html">Poänglista</a></li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+       <p class="title">Välkommen, välj ett quiz! <br>Utmana dig själv och se om du är smartare än dina vänner!</p>
+        <div class="container">
+            <div class="zoom-effect" data-src="images/river.mp4">
+                <a href="Quiz_Geo.html"><img src="images/planet.jpg" alt="A"></a>
+                <div class="img-text">
+                    <p id="test" class="text">Geografi</p>
+                </div>
+            </div>
+            <div class="zoom-effect" data-src="images/city.mp4">
+                <a href="Quiz_Filmer.html"><img src="images/movie.jpg" alt="B"></a>
+                <div class="img-text">
+                    <p class="text">Filmer</p>
+                </div>
+            </div>
+            <div class="zoom-effect" data-src="images/stadium.mp4">
+                <a href="Quiz_Sport.html"><img src="images/sport.webp" alt="C"></a>
+                <div class="img-text">
+                    <p class="text" >Sport</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var video = $("#backgroundVideo");
+            var current = video.children("source").attr('src');
+    
+            $(".zoom-effect").mouseover(function(){
+                Change($(this).attr("data-src"))
+            });
+    
+            function Change(input){
+                if(current != input)
+                    video.animate({opacity: 0}, {duration: 300, complete: function(){ChangeVideo(input)} });
+            }
+            function ChangeVideo(input){
+                current = input;
+                video.attr('src', input)
+                video.animate({opacity: .5}, 300);
+            }
+        </script>
+    </body>
+</html>
